@@ -69,24 +69,26 @@ public class ValidacoesListaTests
     {
         // Arrange
         List<int> lista = new List<int> { 5, -1, -8, 9 };
+        int resultadoEsperado = 9;
 
         // Act
         int resultado = _validacoes.RetornarMaiorNumeroLista(lista);
 
         // Assert
-        Assert.Equal(9, resultado);
+        Assert.Equal(resultadoEsperado, resultado);
     }
 
     [Fact]
     public void DeveRetornarOitoNegativoComoMenorNumeroDaLista()
     {
         // Arrange
-        var lista = new List<int> { 5, -1, -8, 9 };
+        List<int> lista = new List<int> { 5, -1, -8, 9 };
+        int resultadoEsperado = -8;
 
         // Act
-        var resultado = _validacoes.RetornarMenorNumeroLista(lista);
+        int resultado = _validacoes.RetornarMenorNumeroLista(lista);
 
         // Assert
-        Assert.Equal(-8, resultado);
+        Assert.Equal(resultadoEsperado, resultado);
     }
 }
